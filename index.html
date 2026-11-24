@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Community Sports Meetup Organizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<!-- LOGIN -->
+<div id="loginPage" class="wrap" style="max-width:350px; padding-top:100px">
+  <h1 style="color:#2e7d32">🏆 SportsMeetup</h1>
+  <p>Login to join or organize sports meetups</p>
+  Name <input id="userName">
+  Email <input id="userEmail">
+  <button class="green" style="width:100%" onclick="login()">Login</button>
+</div>
+
+<!-- WEBSITE -->
+<div id="app" style="display:none">
+
+  <div class="navbar">
+    <div class="wrap">
+      <b style="font-size:20px; color:#1b5e20">🏆 SportsMeetup</b>
+      <div>
+        <a id="nav-home" onclick="showPage('home')">Home</a>
+        <a id="nav-create" onclick="showPage('create')">Create Meetup</a>
+        <a id="nav-mine" onclick="showPage('mine')">My Meetups</a>
+      </div>
+      <div><span id="hello"></span> <button onclick="logout()">Logout</button></div>
+    </div>
+  </div>
+
+  <!-- home -->
+  <div id="page-home">
+    <div class="hero">
+      <h1>Find your game. Join your community.</h1>
+      <p>Organize and join local sports meetups. Pick a sport, check the venue and time, and book your spot.</p>
+      <button onclick="document.getElementById('meetupTitle').scrollIntoView()">Browse Meetups</button>
+      <button onclick="showPage('create')">Create a Meetup</button>
+    </div>
+
+    <div class="wrap">
+      <div class="row3" id="stats"></div>
+
+      <h2 class="sec">Pick your sport</h2>
+      <div class="row3" id="sportLinks"></div>
+
+      <h2 class="sec" id="meetupTitle">All meetups</h2>
+      <div id="homeList"></div>
+
+      <h2 class="sec">How it works</h2>
+      <div class="row3">
+        <div><b>1</b>Find a meetup<br>Browse games by sport, venue and time</div>
+        <div><b>2</b>Join or wait<br>Join if there is space, or join the waiting list</div>
+        <div><b>3</b>Show up and play<br>Get a reminder and the organizer marks attendance</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- create -->
+  <div id="page-create">
+    <div class="title"><div class="wrap"><h1>Create a Meetup</h1></div></div>
+    <div class="wrap" style="max-width:500px">
+      <div class="box">
+        Sport
+        <select id="sport" onchange="checkOther()">
+          <option>Football</option><option>Cricket</option><option>Badminton</option>
+          <option>Basketball</option><option>Volleyball</option><option>Tennis</option>
+          <option>Table Tennis</option><option>Hockey</option><option>Kabaddi</option>
+          <option>Other</option>
+        </select>
+        <div id="otherBox" style="display:none">
+          Game name <input id="otherSport" placeholder="e.g. Chess">
+        </div>
+        Venue <input id="venue">
+        Date and time <input id="datetime" type="datetime-local">
+        Max players <input id="limit" type="number" min="1">
+        <button class="green" onclick="addMeetup()">Add Meetup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- my meetups (includes organizer control) -->
+  <div id="page-mine">
+    <div class="title"><div class="wrap"><h1>My Meetups</h1></div></div>
+    <div class="wrap">
+      <h3>🔔 Reminders (next 24 hours)</h3>
+      <div id="reminders"></div>
+
+      <h3>Meetups I organize (attendance and players)</h3>
+      <div class="cards" id="controlList"></div>
+
+      <h3>📊 Report</h3>
+      <div class="box" id="report" style="margin-top:0"></div>
+
+      <h3>Meetups I joined</h3>
+      <div class="cards" id="mineList"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

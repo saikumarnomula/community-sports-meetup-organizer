@@ -1,0 +1,40 @@
+body { font-family: Arial; margin: 0 0 40px 0; background: #f4f7f5; }
+.wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+button { padding: 8px 16px; border-radius: 6px; border: 1px solid #999; background: white; cursor: pointer; }
+.green { background: #2e7d32; color: white; border: none; }
+.red { background: #c62828; color: white; border: none; }
+.orange { background: #ef6c00; color: white; border: none; }
+input, select { padding: 9px; margin: 5px 0 12px; width: 100%; box-sizing: border-box; border: 1px solid #999; border-radius: 6px; }
+
+.navbar { background: white; box-shadow: 0 1px 5px #aaa; position: sticky; top: 0; }
+.navbar .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+.navbar a { margin: 0 10px; font-weight: bold; color: #444; cursor: pointer; }
+.navbar a.active { color: #2e7d32; border-bottom: 3px solid #2e7d32; padding-bottom: 5px; }
+
+.hero { background: linear-gradient(to right, #1b5e20, #43a047); color: white; padding: 70px 0; text-align: center; }
+.hero h1 { font-size: 40px; margin: 0 0 10px; }
+.title { background: #2e7d32; color: white; padding: 30px 0; }
+.title h1 { margin: 0; }
+
+.cards { display: flex; flex-wrap: wrap; gap: 20px; margin: 25px 0; }
+.card { background: white; width: 310px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px #aaa; }
+.card.wide { width: 100%; }
+.card.wide td, .card.wide th { white-space: nowrap; padding: 10px 14px; }
+.card.wide .tablebox { overflow-x: auto; margin: 10px 0; }
+.banner { color: white; padding: 18px; font-size: 20px; font-weight: bold; display: flex; justify-content: space-between; }
+.body { padding: 15px; line-height: 1.7; }
+.bar { background: #ddd; height: 8px; border-radius: 5px; }
+.bar div { background: #2e7d32; height: 8px; border-radius: 5px; }
+.box { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 6px #aaa; margin: 25px 0; }
+.reminder { background: #fff8e1; border-left: 5px solid orange; padding: 10px; margin: 8px 0; }
+table { width: 100%; border-collapse: collapse; }
+td, th { border-bottom: 1px solid #ddd; padding: 7px; text-align: left; }
+.center { text-align: center; }
+.row3 { display: flex; justify-content: space-around; text-align: center; margin: 30px 0; }
+.row3 b { display: block; font-size: 34px; color: #2e7d32; }
+#sportLinks { flex-wrap: wrap; gap: 6px; }
+.sport { cursor: pointer; font-size: 13px; font-weight: bold; padding: 6px 12px; border-bottom: 3px solid transparent; }
+.sport div { font-size: 26px; }
+.sport.on { color: #2e7d32; border-bottom-color: #2e7d32; }
+.line { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #ccc; }
+h2.sec { text-align: center; color: #1b5e20; margin: 50px 0 20px; }
